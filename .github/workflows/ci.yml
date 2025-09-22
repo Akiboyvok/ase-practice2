@@ -30,9 +30,8 @@ jobs:
         if: ${{ matrix.os == 'ubuntu-lateset' }}
         uses: actions/upload-artifact@v4
         with:
-          path:
+          path: |
             **/build/distributions/*
-
   e2e-integration:
     name: E2E Integration test
     needs: build
